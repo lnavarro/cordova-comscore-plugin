@@ -1,6 +1,6 @@
 package android;
 
-￼import com.comscore.analytics.comScore;
+import com.comscore.analytics.comScore;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
