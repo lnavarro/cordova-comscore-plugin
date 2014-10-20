@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.plugin.comscoreplugin" version="0.1.0">
+	<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.plugin.comscoreplugin" version="0.1.0">3
+	<engines>
+    	<engine name="cordova" version=">=3.0.0" />
+  	</engines>
     <name>ComScore Plugin</name>
     <description>Simple plugin to connect SDK ComScore with Cordova</description>
+    <author>Leonardo Navarro</author>
     <license>MIT</license>
     
     <js-module src="www/ComScorePlugin.js" name="ComScorePlugin">
-        <clobbers target="window.ComScorePlugin" />
+        <clobbers target="window.comScorePlugin" />
     </js-module>
 
     <!-- android -->
