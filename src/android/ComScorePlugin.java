@@ -9,7 +9,7 @@ import org.apache.cordova.CallbackContext;
 public class ComScorePlugin extends CordovaPlugin {
 	
 	public boolean execute(String customerID, String customerKey, CallbackContext callbackContext) {
-		this.￼setCustomerData(customerID, customerKey, callbackContext);
+		this.setCustomerData(customerID, customerKey, callbackContext);
 		return true;
 	}
 	
