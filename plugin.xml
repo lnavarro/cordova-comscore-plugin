@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.plugin.comscoreplugin" version="0.1.0">
+    <name>ComScore Plugin</name>
+    <description>Simple plugin to connect SDK ComScore with Cordova</description>
+    <license>MIT</license>
+    
+    <js-module src="www/ComScorePlugin.js" name="ComScorePlugin">
+        <clobbers target="window.ComScorePlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ComScorePlugin">
+                <param name="android-package" value="com.comscoreplugin.ComScorePlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        </config-file>
+ 
+        <source-file src="src/android/ComScorePlugin.java" target-dir="src/com/comscoreplugin" />
+     </platform>
+</plugin>
