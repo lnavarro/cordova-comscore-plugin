@@ -29,6 +29,6 @@
         </config-file>
 
         <source-file src="src/android/ComScorePlugin.java" target-dir="src/com/comscoreplugin" />
-        <source-file src="android/comscore.jar" target-dir="libs" />
+        <source-file src="src/android/comscore.jar" target-dir="libs" />
      </platform>
 </plugin>
