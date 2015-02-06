@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-	<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.plugin.comscoreplugin" version="0.1.0">3
-	<engines>
-    	<engine name="cordova" version=">=3.0.0" />
-  	</engines>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.comscoreplugin" version="0.1.0">3
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
     <name>ComScore Plugin</name>
     <description>Simple plugin to connect SDK ComScore with Cordova</description>
     <author>Leonardo Navarro</author>
     <license>MIT</license>
-    
+
     <js-module src="www/ComScorePlugin.js" name="ComScorePlugin">
-        <clobbers target="window.comScorePlugin" />
+        <clobbers target="window.ComScorePlugin" />
     </js-module>
+
 
     <!-- android -->
     <platform name="android">
@@ -30,5 +31,37 @@
 
         <source-file src="src/android/ComScorePlugin.java" target-dir="src/com/comscoreplugin" />
         <source-file src="src/android/comscore.jar" target-dir="libs" />
+     </platform>
+
+     <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ComScorePlugin">
+                <param name="ios-package" value="ComScorePlugin" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ComScorePlugin.h" />
+        <source-file src="src/ios/ComScorePlugin.m" />
+
+        <source-file src="src/ios/libcomScore.a" framework="true" />
+
+        <header-file src="src/ios/CSApplicationState.h" />
+        <header-file src="src/ios/CSCacheFlusher.h" />
+        <header-file src="src/ios/CSCensus.h" />
+        <header-file src="src/ios/CSComScore.h" />
+        <header-file src="src/ios/CSCore.h" />
+        <header-file src="src/ios/CSEventType.h" />
+        <header-file src="src/ios/CSKeepAlive.h" />
+        <header-file src="src/ios/CSMeasurementDispatcher.h" />
+        <header-file src="src/ios/CSNotificationsObserver.h" />
+        <header-file src="src/ios/CSOfflineCache.h" />
+        <header-file src="src/ios/CSSessionState.h" />
+        <header-file src="src/ios/CSStorage.h" />
+        <header-file src="src/ios/CSTaskExecutor.h" />
+        <header-file src="src/ios/CSTransmissionMode.h" />
+
+        <framework src="SystemConfiguration.framework" />
+        <framework src="Security.framework" />
+
      </platform>
 </plugin>
