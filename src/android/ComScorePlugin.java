@@ -67,7 +67,7 @@ public class ComScorePlugin extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
-		comScore.setAppContext(this.comscore.getContext());        
+		comScore.setAppContext(this.cordova.getContext());
 		Log.v(TAG, "pluginInitialize setAppContext");
     }
 
