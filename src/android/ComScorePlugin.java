@@ -67,7 +67,7 @@ public class ComScorePlugin extends CordovaPlugin {
 
     @Override
     protected void pluginInitialize() {
-		comScore.setAppContext(this.cordova.getContext());
+		comScore.setAppContext(this.webView.getContext());
 		Log.v(TAG, "pluginInitialize setAppContext");
     }
 
@@ -87,7 +87,7 @@ public class ComScorePlugin extends CordovaPlugin {
 	}
 
 	private void setAppContext(CallbackContext callbackContext) {
-		comScore.setAppContext(this.cordova.getContext());
+		comScore.setAppContext(this.webView.getContext());
 		Log.v(TAG, "setAppContext");
 		callbackContext.success("ok");
 	}
