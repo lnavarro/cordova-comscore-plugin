@@ -87,7 +87,7 @@ public class ComScorePlugin extends CordovaPlugin {
 	}
 
 	private void setAppContext(CallbackContext callbackContext) {
-		comScore.setAppContext(this.comscore.getContext());        
+		comScore.setAppContext(this.cordova.getContext());
 		Log.v(TAG, "setAppContext");
 		callbackContext.success("ok");
 	}
