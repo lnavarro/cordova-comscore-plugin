@@ -65,11 +65,11 @@ public class ComScorePlugin extends CordovaPlugin {
 		return result;
 	}
 
-    // @Override
-    // protected void pluginInitialize() {
-	// 	comScore.setAppContext(this.webView.getContext());
-	// 	Log.v(TAG, "pluginInitialize setAppContext");
-    // }
+    @Override
+    protected void pluginInitialize() {
+		comScore.setAppContext(this.webView.getContext());
+		Log.v(TAG, "pluginInitialize setAppContext");
+    }
 
 	private void setCustomerData(String customerID, String customerKey, CallbackContext callbackContext) {
 		comScore.setCustomerC2(customerID);
